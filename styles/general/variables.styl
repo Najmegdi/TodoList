@@ -1,0 +1,68 @@
+transition1 = .3s ease-in-out
+transition2 = .4s ease-in-out
+
+// in ranghaye kollie, dar halate light
+html {
+  --lightColor #f9fcfd
+  --darkColor #131319
+  --primaryBlueColor #2674C2
+  --darkBlueColor #2064b1
+  --lightBlueColor #d1e8f6
+  --lighterBlueColor #f0faff
+  --textButtonColor  #f7f7f7
+  --lightGrayColor #a5a4a4
+  --background-thumb-switch #f9fcfd
+  --box-shadow  0px 7px 20px 6px #c2d9fb
+}
+
+  // inja rang haye halate dark ro taarif mikonim
+html.dark {
+  --lightColor #131319
+  --darkColor #dedcdc
+  --primaryBlueColor #0173f3
+  --darkBlueColor #134986
+  --lightBlueColor #626262
+  --lighterBlueColor #f0faff
+  --textButtonColor #e1e0e0
+  --lightGrayColor #a5a4a4
+  --background-thumb-switch #131319
+  --box-shadow  0px 7px 20px 6px #323943
+}
+
+// vaghti tage html classe dark migire. kolle rang ha
+// taghir mikonan ok
+
+@media (prefers-color-scheme: dark) {
+  html {
+    --lightColor #131319
+    --darkColor #dedcdc
+    --primaryBlueColor #044ca2
+    --darkBlueColor #134986
+    --lightBlueColor #626262
+    --lighterBlueColor #f0faff
+    --textButtonColor #e1e0e0
+    --lightGrayColor #a5a4a4
+    --background-thumb-switch #131319
+    --box-shadow  0px 7px 20px 6px #323943
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  html {
+    --lightColor #f9fcfd
+    --darkColor #131319
+    --primaryBlueColor #2674C2
+    --darkBlueColor #2064b1
+    --lightBlueColor #d1e8f6
+    --lighterBlueColor #f0faff
+    --textButtonColor  #f7f7f7
+    --lightGrayColor #a5a4a4
+    --background-thumb-switch #f9fcfd
+    --box-shadow  0px 7px 20px 6px #a2c6fb
+  }
+}
+// light va dark ke toye media neveshtin clas haye tarif shodeye khodtone ya male khodesh?
+//ok man goftam shayad toye script tarif shode bashan
+// na ina tooye khode css mojoode. chizi ke ma taarif kardim classe tage html bood
+
+  // inam mishe taarife style bar asase systeme karbar

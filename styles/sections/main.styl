@@ -1,0 +1,100 @@
+main
+  display flex
+  height 100vh
+
+  aside
+    display flex
+    flex-direction column
+    background var(--lightColor)
+    padding 1rem 0
+    width 250px
+    gap 50px
+
+    header
+      display flex
+      flex-direction column
+      gap 2rem
+
+      a
+        display flex
+        align-items center
+        justify-content center
+        gap 5px
+
+        img
+          width 30px
+          height 30px
+
+    header div
+      display flex
+      flex-direction column
+      align-items center
+      justify-content center
+
+      // injoor jaha aslan niazi be & nist
+      img
+        height 50px
+        width 50px
+
+    .logo
+      font-size 2.8rem
+      font-weight: 700;
+
+    nav
+      display flex
+      flex-direction column
+      gap 20px
+
+      ul
+        display flex
+        flex-direction column
+        gap 12px
+
+        li
+          display flex
+
+          a
+            flex-grow: 1
+            display: flex
+            align-items: center
+            gap: 10px
+            color var(--lightGrayColor)
+            cursor pointer
+            padding .5rem 0 .5rem 3rem
+            transition transition1
+            border-left transparent 4px solid
+
+            .icon
+              width: 18px
+              height: 18px
+
+          // in etefagha dige faghat vaseye tage a miofte
+          &:hover, &.active
+            a
+              color var(--primaryBlueColor)
+              border-left var(--primaryBlueColor) 4px solid
+
+      button
+        margin-left: 40px
+
+    footer
+      display flex
+      align-items center
+      justify-content center
+      gap 10px
+
+
+  section
+    display flex
+    justify-content center
+    align-items center
+    flex-direction column
+    background var(--lightBlueColor)
+    gap 5px
+    flex-grow 1
+
+    h1
+      font-weight 700
+
+    p
+      font-size 1.4rem
