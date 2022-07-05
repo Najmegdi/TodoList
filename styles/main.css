@@ -183,7 +183,7 @@ html.transition,
 html.transition *,
 html.transition::before,
 ::after {
-  transition: 300ms;
+  transition: 0.01s;
 }
 i.icon {
   display: flex;
