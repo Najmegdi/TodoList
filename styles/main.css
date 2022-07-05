@@ -1,12 +1,12 @@
 @font-face {
-  src: url("./fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-Regular.ttf");
+  src: url("../fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-Regular.ttf");
   font-family: Atkinson_Hyperlegible;
   font-style: normal;
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
-  src: url("./fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-Bold.ttf");
+  src: url("../fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-Bold.ttf");
   font-family: Atkinson_Hyperlegible;
   font-style: normal;
   font-weight: 700;
@@ -179,6 +179,12 @@ h5 {
 h6 {
   font-size: 0.67rem;
 }
+html.transition,
+html.transition *,
+html.transition::before,
+::after {
+  transition: 300ms;
+}
 i.icon {
   display: flex;
   align-items: center;
@@ -198,7 +204,7 @@ i.icon svg.portrait {
 html {
   --lightColor: #f9fcfd;
   --darkColor: #131319;
-  --primaryBlueColor: #2674c2;
+  --primaryColor: #2674c2;
   --darkBlueColor: #2064b1;
   --lightBlueColor: #d1e8f6;
   --lighterBlueColor: #f0faff;
@@ -208,29 +214,31 @@ html {
   --box-shadow: 0px 7px 20px 6px #c2d9fb;
 }
 html.dark {
-  --lightColor: #131319;
+  --lightColor: #121212;
+  --lighterColor: #232323;
   --darkColor: #dedcdc;
-  --primaryBlueColor: #0173f3;
-  --darkBlueColor: #134986;
-  --lightBlueColor: #626262;
+  --primaryColor: #5db9fa;
+  --darkBlueColor: #30a7fa;
+  --lightBlueColor: #191919;
   --lighterBlueColor: #f0faff;
-  --textButtonColor: #e1e0e0;
+  --textButtonColor: #121212;
   --lightGrayColor: #a5a4a4;
   --background-thumb-switch: #131319;
-  --box-shadow: 0px 7px 20px 6px #323943;
+  --box-shadow: none;
 }
 @media (prefers-color-scheme: dark) {
   html {
-    --lightColor: #131319;
+    --lightColor: #121212;
+    --lighterColor: #232323;
     --darkColor: #dedcdc;
-    --primaryBlueColor: #044ca2;
-    --darkBlueColor: #134986;
-    --lightBlueColor: #626262;
+    --primaryColor: #5db9fa;
+    --darkBlueColor: #30a7fa;
+    --lightBlueColor: #191919;
     --lighterBlueColor: #f0faff;
-    --textButtonColor: #e1e0e0;
+    --textButtonColor: #121212;
     --lightGrayColor: #a5a4a4;
     --background-thumb-switch: #131319;
-    --box-shadow: 0px 7px 20px 6px #323943;
+    --box-shadow: none;
   }
 }
 @media (prefers-color-scheme: light) {
@@ -289,7 +297,7 @@ button {
   align-items: center;
   border: 1px solid transparent;
   border-radius: 5px;
-  background: var(--primaryBlueColor);
+  background: var(--primaryColor);
   color: var(--textButtonColor);
   padding: 1rem 2rem;
   margin-top: 20px;
@@ -352,7 +360,7 @@ button .icon {
   opacity: 0;
 }
 .switch-wrapper input:checked + .switch {
-  background-color: var(--primaryBlueColor);
+  background-color: var(--primaryColor);
 }
 .switch-wrapper input:checked + .switch .thumb {
   left: 28px;
@@ -434,8 +442,8 @@ main aside nav ul li a .icon {
 }
 main aside nav ul li:hover a,
 main aside nav ul li.active a {
-  color: var(--primaryBlueColor);
-  border-left: var(--primaryBlueColor) 4px solid;
+  color: var(--primaryColor);
+  border-left: var(--primaryColor) 4px solid;
 }
 main aside nav button {
   margin-left: 40px;
@@ -452,6 +460,7 @@ main section {
   align-items: center;
   flex-direction: column;
   background: var(--lightBlueColor);
+  border-left: 1px solid var(--lighterColor);
   gap: 5px;
   flex-grow: 1;
 }
