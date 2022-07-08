@@ -1,17 +1,21 @@
-document.querySelector('#theme-switch')
-    .addEventListener('change', (e) => {
-        if (e.target.checked) {
-            // document.documentElement = <html>
-            trans();
-            document.documentElement.classList.add('dark');
-        } else {
-            trans();
-            document.documentElement.classList.remove('dark');
-        }
-    });
-let trans = () => {
-    document.documentElement.classList.add('transition');
-    window.setTimeout(()=> {
-        document.documentElement.classList.remove('transition')
-    } , 1000)
+const themeSwitch = document.querySelector('#theme-switch');
+
+// Check system theme and change switch value
+if (window.matchMedia) {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (prefersDark) {
+        themeSwitch.checked = prefersDark;
+    }
 }
+
+// Change theme based on switch changes
+themeSwitch.addEventListener('change', (e) => {
+    if (e.target.checked) {
+        document.documentElement.classList.remove('light');
+        document.documentElement.classList.add('dark');
+    } else {
+        document.documentElement.classList.remove('dark');
+        document.documentElement.classList.add('light');
+    }
+});

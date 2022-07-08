@@ -1,37 +1,20 @@
-transition1 = .3s ease-in-out
-transition2 = .4s ease-in-out
-
-
-html {
+// default / automatic light
+:root, :root.light {
   --lightColor #f9fcfd
   --darkColor #131319
-  --primaryColor #2674C2
+  --primaryBlueColor #2674C2
   --darkBlueColor #2064b1
   --lightBlueColor #d1e8f6
   --lighterBlueColor #f0faff
   --textButtonColor  #f7f7f7
   --lightGrayColor #a5a4a4
   --background-thumb-switch #f9fcfd
-  --box-shadow  0px 7px 20px 6px #c2d9fb
+  --box-shadow  0px 7px 20px 6px #a2c6fb
 }
 
-html.dark {
-  --lightColor #121212
-  --lighterColor #232323
-  --darkColor #dedcdc
-  --primaryColor #5db9fa
-  --darkBlueColor #30a7fa
-  --lightBlueColor #191919
-  --lighterBlueColor #f0faff
-  --textButtonColor #121212
-  --lightGrayColor #a5a4a4
-  --background-thumb-switch #131319
-  --box-shadow  none
-}
-
-
+// automatic dark
 @media (prefers-color-scheme: dark) {
-  html {
+  :root:not(.light):not(.dark) {
     --lightColor #121212
     --lighterColor #232323
     --darkColor #dedcdc
@@ -46,17 +29,17 @@ html.dark {
   }
 }
 
-@media (prefers-color-scheme: light) {
-  html {
-    --lightColor #f9fcfd
-    --darkColor #131319
-    --primaryBlueColor #2674C2
-    --darkBlueColor #2064b1
-    --lightBlueColor #d1e8f6
-    --lighterBlueColor #f0faff
-    --textButtonColor  #f7f7f7
-    --lightGrayColor #a5a4a4
-    --background-thumb-switch #f9fcfd
-    --box-shadow  0px 7px 20px 6px #a2c6fb
-  }
+// manual dark
+:root.dark {
+  --lightColor #121212
+  --lighterColor #232323
+  --darkColor #dedcdc
+  --primaryColor #5db9fa
+  --darkBlueColor #30a7fa
+  --lightBlueColor #191919
+  --lighterBlueColor #f0faff
+  --textButtonColor #121212
+  --lightGrayColor #a5a4a4
+  --background-thumb-switch #131319
+  --box-shadow  none
 }
