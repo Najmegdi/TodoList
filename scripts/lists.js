@@ -188,3 +188,25 @@ btnCreateList.addEventListener('click', () => {
 
 
 // soali hast dar morede karaii ke kardim?
+// mishe ezafe konid vali kheyli pichide mishe code.
+// hamin alan ba kamtarin functionality 180 khat code neveshtim :D
+// bishtar berim jelo in karo mikonim.
+// akhe masale ine ke age karbar bekhad icon entekhab kone.
+// ma bayad ye jaii zakhire konim in icon ro. local storage ke nemishe
+// barnameye samte back-end mikhad ke upload beshe o baadan ba API
+// begirimesh. kheyli karo sakht mikone vase avvale kar
+
+// kheyli khube ke donbale chizaye jazab tar hastid vali be moroor behesh
+// nazdik tar mishim
+
+// khahesh mikonam. man kheyli khosh hal misham ke betunam komaki bokonam
+// pishrafti dashte bashid.
+// ghorbane shoma
+// man ba ejazatoon beram bebinam bache ha chikar mikonan. baadan bishtar
+// sohbat mikonim dar morede edameye proje
+// bale. mitunid khodetun ham JSesh ro taghir bedid ke
+// element haye bishtari ro namayesh bede moghe entekhab shodane list.
+// va beresunidesh be chizi ke babe meyle khodetune
+
+// are age soali chizi bud hatman azam beporsid. cheshmetun salamat
+// push shod ruye github alan mitunid pull begirid
